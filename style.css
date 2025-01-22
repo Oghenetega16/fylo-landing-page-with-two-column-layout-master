@@ -37,15 +37,13 @@ main {
 
 
 /* HEADER SECTION */
-ul {
-    list-style: none;
-}
-
-li {
+header nav a {
     font-size: 12px;
     color: var(--desaturated-blue);
     font-weight: 700;
     font-family: "Raleway", serif;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 header {
@@ -59,7 +57,7 @@ header #logo img {
     width: 70px;
 }
 
-nav ul {
+nav {
     display: flex;
     gap: 20px;
 }
@@ -133,6 +131,7 @@ nav ul {
     padding-bottom: 3px;
     font-size: 12px;
     color: var(--moderate-cyan);
+    cursor: pointer;
 }
 
 #testimonial {
@@ -241,6 +240,11 @@ footer {
     color: var(--light-grayish-blue);
     font-family: "Open Sans", serif;
     font-weight: 400;
+    cursor: pointer;
+}
+
+.item ul li:hover {
+    color: var(--bright-blue);
 }
 
 .socials {
@@ -258,11 +262,17 @@ footer {
     border: 1px solid white;
     color: #fff;
     border-radius: 50%;
-    padding: 7.2px;
+    padding: 7.4px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
-/* COMMON ELEMENTS */
+.fa-brands:hover {
+    color: var(--bright-blue);
+    border-color: var(--bright-blue);
+}
+
+/* OTHERS */
 .illustration {
     width: 300px;
     margin: auto;
@@ -295,4 +305,185 @@ button {
     border-radius: 3px;
     font-weight: 700;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    main {
+        margin: clamp(20px, 6.5vw, 50px);
+    }
+
+    /* HEADER SECTION */
+    header {
+        margin-left: clamp(20px, 6.5vw, 50px);
+    }
+
+    header nav a {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    header #logo img {
+        width: 75%;
+    }
+
+    nav {
+        gap: 30px;
+    }
+
+    /* FIRST SECTION */
+    .first {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        background-image: url(./images/bg-curve-desktop.svg);
+        padding-bottom: 270px;
+    }
+
+    .first-text {
+        width: 530px;
+        margin-left: clamp(20px, 6.5vw, 50px);
+    }
+
+    .first-text h3 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: 0.67em 0;
+        font-family: "Raleway", serif;
+    }
+
+    .first-text p {
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .first .input_btn {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .first .input_btn input {
+        width: 100%;
+    }
+
+    .first .input_btn button {
+        margin: 0;
+        width: 60%;
+    }
+
+    /* SECOND SECTION */
+    .second {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .second-text {
+        margin-left: clamp(20px, 6.5vw, 50px);
+    }
+
+    .second-text h4 {
+        text-align: left;
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: 0.67em 0;
+    }
+
+    .second-text .illustration {
+        margin: 0;
+    }
+
+    .second-text p {
+        width: 530px;
+    }
+
+    .arrow {
+        margin: 30px 0;
+        width: 30%;
+    }
+
+    #testimonial {
+        width: 250px;
+        margin: 0;
+    }
+
+    .testimonial-text p {
+        width: auto;
+    }
+
+
+    /* THIRD SECTION */
+    .third {
+        padding-bottom: 50px;
+    }
+
+    .third-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: clamp(20px, 6.5vw, 50px);
+        padding-top: 50px;
+    }
+
+    .third-content #access_text {
+        width: 500px;
+        text-align: left;
+    }
+
+    #access_text h3 {
+        padding: 0;
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: 0.67em 0 0 0;
+    }
+
+    .third-content #input_btn {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 500px;
+    }
+
+    .third-content #input_btn input {
+        margin: 0;
+    }
+
+    .third-content #input_btn button {
+        margin: 0;
+        width: 40%;
+    }
+
+
+    /* FOOTER SECTION */
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: clamp(20px, 6.5vw, 50px);
+        padding: 90px 0;
+    }
+
+    #footer_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 200px;
+    }
+
+    /* OTHERS */
+    .illustration {
+        width: 40%;
+    }
+
+    
 }
